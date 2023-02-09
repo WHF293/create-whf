@@ -50,7 +50,7 @@ export const copy = (src: string, dest: string) => {
 		try {
 			console.log(green(`正在创建文件: ${dest}`));
 			fs.copyFileSync(src, dest)
-		} catch(err) {
+		} catch (err) {
 			console.log(dest + ' 文件复制出错');
 			throw new Error(err)
 		}
@@ -93,4 +93,8 @@ export const getFrameworkList = () => {
  */
 export const getFrameworkTypeList = (type) => {
 	return framework.find(item => item.value === type)!.ui
+}
+
+export function to<T, U = Error>(fn: Promise<any>): Promise<[null, T] | [U, null]> {
+	return fn.then<[null, T]>((res: T) => [null, res]).catch<[U, null]>((err: U) => [err, null])
 }
