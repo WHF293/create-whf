@@ -1,0 +1,46 @@
+{
+    "name": "create-whf",
+    "version": "1.0.0-beta.0",
+    "type": "module",
+    "license": "MIT",
+    "author": "WangHaoFeng",
+    "keywords": ["cli", "vite", "ts"],
+    "description": "一个用于快速创建基于 vite + ts 项目模板的简易脚手架",
+    "bin": {
+        "create-whf": "index.js"
+    },
+    "files": [
+        "index.js",
+        "template-*",
+        "dist"
+    ],
+    "main": "index.js",
+    "scripts": {
+        "dev": "unbuild --stub",
+        "build": "unbuild",
+        "typecheck": "tsc --noEmit",
+        "prepublishOnly": "npm run build"
+    },
+    "engines": {
+        "node": "^14.18.0 || >=16.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/WHF293/create-whf.git"
+    },
+    "bugs": {
+        "url": "https://github.com/WHF293/create-whf/issues"
+    },
+    "homepage": "https://github.com/WHF293/create-whf.git#readme",
+    "devDependencies": {
+        "@types/figlet": "^1.5.5",
+        "@types/node": "^18.11.18",
+        "figlet": "^1.5.2",
+        "kolorist": "^1.6.0",
+        "prompts": "^2.4.2",
+        "resolve": "^1.22.1",
+        "rollup": "^3.12.1",
+        "rollup-plugin-license": "^3.0.1",
+        "unbuild": "^1.1.1"
+    }
+}
