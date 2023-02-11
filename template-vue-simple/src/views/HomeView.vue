@@ -1,8 +1,7 @@
 <script setup lang="ts">
+import i18nTest from '@/components/i18nTest.vue'
 </script>
 
 <template>
-  <main>
-    home
-  </main>
+  <i18nTest></i18nTest>
 </template>

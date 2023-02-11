@@ -10,16 +10,16 @@ import '@/assets/global.css'
 import 'virtual:windi.css'
 
 const run = () => {
-    const app = createApp(App)
-    const pinia = createPinia()
-    // 状态持久化
-    pinia.use(piniaPluginPersistedstate)
-    
-    app.use(i18n)
-    app.use(pinia)
-    app.use(router)
-    
-    app.mount('#app')
+  const app = createApp(App)
+  const pinia = createPinia()
+  // 状态持久化
+  pinia.use(piniaPluginPersistedstate)
+
+  app.use(i18n)
+  app.use(pinia)
+  app.use(router)
+
+  app.mount('#app')
 }
 
 run()

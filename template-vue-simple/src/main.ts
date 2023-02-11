@@ -1,13 +1,21 @@
-import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { createApp } from 'vue'
 
 import App from './App.vue'
 import router from './router'
 
-const app = createApp(App)
+import '@/assets/global.css'
+import 'virtual:windi.css'
 
-const pinia = createPinia()
-app.use(pinia)
-app.use(router)
+const run = () => {
+  const app = createApp(App)
+  const pinia = createPinia()
+  // 状态持久化
 
-app.mount('#app')
+  app.use(pinia)
+  app.use(router)
+
+  app.mount('#app')
+}
+
+run()

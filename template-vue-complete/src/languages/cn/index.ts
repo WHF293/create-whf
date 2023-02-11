@@ -1,6 +1,6 @@
 export default {
-    person: {
-        name: '老王',
-        hobby: '唱跳rap'
-    }
+  person: {
+    name: '鸡哥',
+    hobby: '唱跳rap',
+  },
 }

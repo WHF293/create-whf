@@ -4,15 +4,15 @@ import cn from './cn'
 import en from './en'
 
 const messages = {
-    cn: { ...cn },
-    en: { ...en }
+  cn: { ...cn },
+  en: { ...en },
 }
 
 const i18n = createI18n({
-    legacy: false,
-    globalInjection: true,
-    locale: 'cn',
-    messages
+  legacy: false,
+  globalInjection: true,
+  locale: 'cn',
+  messages,
 })
 
 export default i18n
