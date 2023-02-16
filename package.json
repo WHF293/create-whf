@@ -23,7 +23,11 @@
         "dev": "unbuild --stub",
         "build": "unbuild",
         "typecheck": "tsc --noEmit",
-        "prepublishOnly": "npm run build"
+        "prepublishOnly": "npm run build",
+        "preCommit": "simple-git-hooks"
+    },
+    "simple-git-hooks": {
+        "commit-msg": "node scripts/verifyCommit.js"
     },
     "engines": {
         "node": "^14.18.0 || >=16.0.0"
