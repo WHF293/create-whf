@@ -1,4 +1,7 @@
 
+![create-whf](https://whf-img.oss-cn-hangzhou.aliyuncs.com/img/h-theme.png)
+
+
 > tip: 模仿 create-vite 实现的个人脚手架
 
 ## 临时安装（推荐）
