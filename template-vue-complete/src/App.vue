@@ -14,8 +14,6 @@ import { RouterLink, RouterView } from 'vue-router'
       <RouterLink to="/" class="mx-4">Home</RouterLink>
       <span>|</span>
       <RouterLink to="/about" class="mx-4">About</RouterLink>
-      <span>|</span>
-      <RouterLink to="/login" class="mx-4">login</RouterLink>
     </nav>
     <RouterView />
     <p class="text-center text-blue-400">project created by create-whf</p>

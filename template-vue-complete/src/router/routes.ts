@@ -1,6 +1,7 @@
 import HomeView from '@/views/HomeView.vue'
+import type { RouteRecordRaw } from 'vue-router'
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
@@ -23,7 +24,7 @@ const routes = [
     meta: {
       name: '登录页',
     },
-    component: () => import('@/views/loginPage.vue'),
+    component: () => import('@/views/login.vue'),
   },
 ]
 

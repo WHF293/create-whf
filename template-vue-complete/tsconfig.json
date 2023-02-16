@@ -3,11 +3,12 @@
   "include": ["src/typings/env.d.tsngs/env.d.ts", "src/**/*", "src/**/*.vue"],
   "compilerOptions": {
     "baseUrl": ".",
-    "module": "ES2022",
+    "module": "ESNext",
     "paths": {
       "@/*": ["./src/*"],
       "#/*": ["./src/utils/*"],
-    }
+    },
+    "lib": ["dom", "ES2017"]
   },
 
   "references": [

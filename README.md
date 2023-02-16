@@ -1,16 +1,25 @@
 
+![create-whf](https://whf-img.oss-cn-hangzhou.aliyuncs.com/img/h-theme.png)
+
+
 > tip: 模仿 create-vite 实现的个人脚手架
 
-## 安装
+## 临时安装（推荐）
 
 ```shell
-npm i create-whf -g
+# 任意目录终端下输入以下命令
+pnpm create whf
+# or
+yarn create whf
 ```
 
-## 创建项目
+![](https://whf-img.oss-cn-hangzhou.aliyuncs.com/img/20230209225537-2023-02-09-22-55-37.png)
+
+## 本地全局安装（不推荐）
 
 ```shell
 # 终端运行
+npm i create-whf -g
 create-whf
 ```
 

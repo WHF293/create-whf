@@ -22,8 +22,13 @@
     "scripts": {
         "dev": "unbuild --stub",
         "build": "unbuild",
-        "typecheck": "tsc --noEmit",
-        "prepublishOnly": "npm run build"
+        "type-check": "tsc --noEmit",
+        "prepublishOnly": "npm run build",
+        "preCommit": "simple-git-hooks"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "pnpm type-check",
+        "commit-msg": "node scripts/verifyCommit.js"
     },
     "engines": {
         "node": "^14.18.0 || >=16.0.0"
@@ -42,6 +47,8 @@
         "kolorist": "^1.7.0",
         "prompts": "^2.4.2",
         "rollup": "^3.12.1",
+        "simple-git-hooks": "^2.8.1",
+        "typescript": "^4.9.5",
         "unbuild": "^1.1.1"
     }
 }
