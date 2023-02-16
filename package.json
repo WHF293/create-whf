@@ -22,11 +22,12 @@
     "scripts": {
         "dev": "unbuild --stub",
         "build": "unbuild",
-        "typecheck": "tsc --noEmit",
+        "type-check": "tsc --noEmit",
         "prepublishOnly": "npm run build",
         "preCommit": "simple-git-hooks"
     },
     "simple-git-hooks": {
+        "pre-commit": "pnpm type-check",
         "commit-msg": "node scripts/verifyCommit.js"
     },
     "engines": {
