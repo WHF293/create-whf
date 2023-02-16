@@ -8,7 +8,21 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "preCommit": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged && pnpm type-check",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
+  "lint-staged": {
+    "src/**/.{ts,tsx,vue}": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ],
+    "src/**/.{js,jsx}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "pinia": "^2.0.28",
@@ -27,6 +41,8 @@
     "eslint": "^8.22.0",
     "eslint-plugin-vue": "^9.3.0",
     "lodash-es": "^4.17.21",
+    "lint-staged": "^13.1.1",
+    "simple-git-hooks": "^2.8.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
     "typescript": "~4.7.4",

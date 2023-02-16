@@ -1,5 +1,5 @@
 <template>
-  <div class="flex_center">我是登录页</div>
+  <div>login</div>
 </template>
 <script setup lang="ts"></script>
 <style scoped></style>
