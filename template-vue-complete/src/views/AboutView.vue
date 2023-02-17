@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import B from '@/components/B.vue'
+import i18nTest from '@/components/i18nTest.vue'
 </script>
 
 <template>
-  <B></B>
+  <i18nTest></i18nTest>
 </template>
