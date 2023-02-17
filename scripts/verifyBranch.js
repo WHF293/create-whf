@@ -3,20 +3,18 @@ import { readFileSync } from 'fs'
 import path from 'path'
 
 
-const branchRE = /^(main|dev){1}$|^(feature|hotfix|release)\/.+$/
+const branchRE = /^(main|dev){1}$|^(feature|fix)\/.{2,10}\/.+$/
 
 const headPath = path.resolve('.git/HEAD')
 const branchName = readFileSync(headPath, 'utf-8').trim().replace('ref: refs/heads/', '')
 
-
 if (!branchRE.test(branchName)) {
-    console.log();
-    console.log(
-        `当前分支命名不规范，无法推送分支，请修改后在提交\n\n` + 
-        `分支命名规范如下： \n` + 
+    console.error(
+        `\n当前分支 ${branchName} 命名不规范，无法推送分支，请修改后再提交\n\n` +
+        `分支命名规范： \n` +
         `  -  feature/xxxxx\n` +
         `  -  fix/xxxx\n` +
-        `具体匹配规则如下：  ^(main|dev){1}$|^(feature|hotfix|release)\/.+$`
+        `\n具体规范： ${branchRE}`
     );
     process.exit(1)
 }
