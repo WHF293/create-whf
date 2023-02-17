@@ -7,3 +7,11 @@ html, body, #app {
     margin: 0;
     padding: 0;
 }
+
+.my-bg {
+    background-color: var(--primaryColor);
+}
+
+.active-text {
+    color: var(--activeTextColor)
+}

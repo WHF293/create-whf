@@ -24,13 +24,13 @@ const commitRE = /^(feat|fix|docs|style|refactor|perf|test|build|chore|revert)(\
 if (!commitRE.test(msg)) {
     console.log()
     console.log(
-        `当前 commit 内容：\n` +
+        `当前 commit 信息：\n` +
         `  -  ${msg} \n\n` +
         `commit 格式不符合提交要求, 请按如下格式进行修改：\n` +
         `  -  feat(xxxx): 新增 xxx 功能\n` +
         `  -  fix(xxxx): 修复 xxx 问题\n` +
         `  -  docs: 修改了 xxx 文档\n\n` +
-        'commit 类型： feat|fix|docs|style|refactor|perf|test|build|chore|revert\n\n'
+        `具体规范： ${commitRE}\n\n`
     )
     // 退出程序
     process.exit(1)

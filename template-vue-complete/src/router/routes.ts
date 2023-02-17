@@ -24,7 +24,7 @@ const routes: RouteRecordRaw[] = [
     meta: {
       name: '登录页',
     },
-    component: () => import('@/views/login.vue'),
+    component: () => import('@/views/loginPage.vue'),
   },
 ]
 

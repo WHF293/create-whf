@@ -28,7 +28,8 @@
     },
     "simple-git-hooks": {
         "pre-commit": "pnpm type-check",
-        "commit-msg": "node scripts/verifyCommit.js"
+        "commit-msg": "node scripts/verifyCommit.js",
+        "pre-push": "node scripts/verifyBranch.js"
     },
     "engines": {
         "node": "^14.18.0 || >=16.0.0"
